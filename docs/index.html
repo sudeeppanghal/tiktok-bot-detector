@@ -3,31 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TikTok Campaign Tracker</title>
-  <meta name="description" content="Verify authentic TikTok engagement for your campaigns. Detect bot views and fake metrics instantly." />
-  <meta name="tiktok-developers-site-verification" content="U1rkvcEb4kWqifXcsYOrWTeBTtRc4cM5" />
+  <title>Instagram Campaign Verifier & Bot Detector</title>
+  <meta name="description" content="Verify authentic Instagram engagement for your creator campaigns. Detect bot likes, ghost followers, and fake reach instantly." />
 
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #0a0a0f; color: #e2e8f0;
+      background: #090a0f; color: #e2e8f0;
     }
     header {
-      background: linear-gradient(135deg, #0f0f1a 0%, #1a0a2e 100%);
-      border-bottom: 1px solid rgba(0,212,255,0.2);
+      background: linear-gradient(90deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+      padding: 2px 0;
+    }
+    .header-inner {
+      background: rgba(15, 17, 26, 0.95);
       padding: 16px 24px;
       display: flex; align-items: center; justify-content: space-between;
     }
     .logo { font-size: 22px; font-weight: 800;
-      background: linear-gradient(135deg, #00d4ff, #a855f7);
+      background: linear-gradient(90deg, #f09433, #dc2743, #bc1888);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     }
     nav a { color: #94a3b8; text-decoration: none; margin-left: 24px; font-size: 14px; }
-    nav a:hover { color: #00d4ff; }
+    nav a:hover { color: #e1306c; }
     .hero { text-align: center; padding: 80px 24px 60px; }
     .hero h1 { font-size: 52px; font-weight: 900; line-height: 1.1; margin-bottom: 20px;
-      background: linear-gradient(135deg, #ffffff 0%, #00d4ff 50%, #a855f7 100%);
+      background: linear-gradient(90deg, #ffffff 0%, #f472b6 50%, #e1306c 100%);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     }
     .hero p { font-size: 20px; color: #94a3b8; max-width: 580px; margin: 0 auto 40px; }
@@ -37,10 +39,10 @@
       transition: all 0.2s;
     }
     .btn-primary {
-      background: linear-gradient(135deg, #00d4ff, #a855f7);
-      color: #000;
+      background: linear-gradient(45deg, #f09433, #dc2743, #bc1888);
+      color: #fff;
     }
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,212,255,0.3); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(225,48,108,0.4); }
     .btn-secondary {
       background: rgba(255,255,255,0.06); color: #e2e8f0;
       border: 1px solid rgba(255,255,255,0.1);
@@ -52,98 +54,55 @@
       border-radius: 16px; padding: 28px;
       transition: all 0.2s;
     }
-    .card:hover { border-color: rgba(0,212,255,0.3); transform: translateY(-4px); }
+    .card:hover { border-color: rgba(225,48,108,0.4); transform: translateY(-4px); }
     .card-icon { font-size: 36px; margin-bottom: 16px; }
     .card h3 { font-size: 18px; font-weight: 700; color: #f1f5f9; margin-bottom: 10px; }
     .card p { color: #64748b; font-size: 14px; line-height: 1.6; }
-    .legal { background: rgba(0,212,255,0.04); border-top: 1px solid rgba(0,212,255,0.1);
-      padding: 40px 24px; text-align: center; }
-    .legal h2 { font-size: 24px; font-weight: 700; color: #00d4ff; margin-bottom: 12px; }
-    .legal p { color: #64748b; max-width: 600px; margin: 0 auto 24px; }
-    .legal-links { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-    .legal-link {
-      display: inline-block; padding: 10px 24px;
-      background: rgba(0,212,255,0.08); border: 1px solid rgba(0,212,255,0.2);
-      border-radius: 8px; color: #00d4ff; text-decoration: none; font-size: 14px; font-weight: 600;
-      transition: all 0.2s;
-    }
-    .legal-link:hover { background: rgba(0,212,255,0.15); }
-    footer { text-align: center; padding: 32px 24px;
-      border-top: 1px solid rgba(255,255,255,0.06);
-      color: #475569; font-size: 13px;
-    }
-    .badge {
-      display: inline-block; background: rgba(168,85,247,0.15);
-      border: 1px solid rgba(168,85,247,0.3); border-radius: 20px;
-      padding: 4px 14px; color: #a855f7; margin-top: 8px;
-      text-decoration: none;
-    }
+    footer { background: #07080c; border-top: 1px solid rgba(255,255,255,0.08); padding: 40px 24px; text-align: center; font-size: 14px; color: #64748b; }
+    footer a { color: #e1306c; text-decoration: none; }
   </style>
 </head>
 <body>
+  <header>
+    <div class="header-inner">
+      <div class="logo">📸 Instagram Campaign Verifier</div>
+      <nav>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </nav>
+    </div>
+  </header>
 
-<header>
-  <div class="logo">🎯 TikTok Campaign Tracker</div>
-  <nav>
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="terms.html">Terms of Service</a>
-    <a href="https://t.me/batmanjaatwhop">Contact</a>
-  </nav>
-</header>
+  <section class="hero">
+    <h1>Real Engagement Verification for Instagram Campaigns</h1>
+    <p>Protect your brand campaigns against fake likes, ghost followers, and bot pods. Live automated Instagram Graph API verification.</p>
+    <div>
+      <a href="https://github.com/sudeeppanghal/tiktok-bot-detector/raw/main/android-app/android/app/build/outputs/apk/debug/app-debug.apk" class="btn btn-primary">📲 Download Android App (APK)</a>
+      <a href="privacy.html" class="btn btn-secondary">Privacy Policy</a>
+    </div>
+  </section>
 
-<div class="hero">
-  <h1>Verify Real TikTok<br/>Campaign Engagement</h1>
-  <p>The professional tool for campaign managers to detect fake views and verify authentic creator metrics — powered by real TikTok data.</p>
-  <a href="#features" class="btn btn-primary">Explore Features</a>
-  <a href="privacy.html" class="btn btn-secondary">Privacy Policy</a>
-</div>
+  <section class="features">
+    <div class="card">
+      <div class="card-icon">🛡️</div>
+      <h3>Ghost Follower Detection</h3>
+      <p>Identify accounts with inactive bot followers, automated pod networks, and bought engagement metrics.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">📊</div>
+      <h3>Real Explore Reach Audit</h3>
+      <p>Analyze post impressions, Explore tab recommendations, and genuine like-to-follower conversion ratios.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🌐</div>
+      <h3>Meta Developer Graph API</h3>
+      <p>Direct Meta Graph API integration for verified creator insights, impressions, and audience demographics.</p>
+    </div>
+  </section>
 
-<div class="features" id="features">
-  <div class="card">
-    <div class="card-icon">🔗</div>
-    <h3>TikTok Login Integration</h3>
-    <p>Creators connect their TikTok account securely via official TikTok Login Kit (OAuth 2.0). No passwords shared with us.</p>
-  </div>
-  <div class="card">
-    <div class="card-icon">📊</div>
-    <h3>Real Analytics</h3>
-    <p>View authentic follower counts, video views, likes, comments, and shares pulled directly from TikTok's official API.</p>
-  </div>
-  <div class="card">
-    <div class="card-icon">🤖</div>
-    <h3>Bot Detection Engine</h3>
-    <p>AI-powered analysis of like/view ratios, geographic patterns, and traffic sources to flag suspicious bot-driven engagement.</p>
-  </div>
-  <div class="card">
-    <div class="card-icon">🌍</div>
-    <h3>Country Breakdown</h3>
-    <p>See exactly which countries your audience comes from — verify that views are from real humans, not bot farms.</p>
-  </div>
-  <div class="card">
-    <div class="card-icon">⏱️</div>
-    <h3>Watch Time Verification</h3>
-    <p>Average watch time and completion rates reveal whether views are from real engaged users or automated HTTP requests.</p>
-  </div>
-  <div class="card">
-    <div class="card-icon">🔒</div>
-    <h3>Admin-Only Access</h3>
-    <p>Creators only see a simple connect screen. All analytics are secured behind an admin password — only campaign managers see the data.</p>
-  </div>
-</div>
-
-<div class="legal">
-  <h2>Legal Documents</h2>
-  <p>TikTok Campaign Tracker complies with TikTok's Platform Guidelines and all applicable data protection regulations. Read our legal documents below.</p>
-  <div class="legal-links">
-    <a href="privacy.html" class="legal-link">📋 Privacy Policy</a>
-    <a href="terms.html" class="legal-link">📄 Terms of Service</a>
-  </div>
-</div>
-
-<footer>
-  <div>© 2025 TikTok Campaign Tracker · All rights reserved</div>
-  <a href="https://t.me/batmanjaatwhop" class="badge">Developed by @batmanjaatwhop</a>
-</footer>
-
+  <footer>
+    <p>App Developed by <strong>@batmanjaatwhop</strong> • Official Telegram: <a href="https://t.me/batmanjaatwhop" target="_blank">t.me/batmanjaatwhop</a></p>
+    <p style="margin-top: 10px; font-size: 12px;"><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+  </footer>
 </body>
 </html>
